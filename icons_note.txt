@@ -1,0 +1,7 @@
+// Dummy directory for icons to prevent errors if not present, though manifest points to them.
+// In a real scenario we would generate images, but for now we create empty files or just rely on the browser handling missing icons gracefully (it usually shows a default).
+// I will create simple placeholder icons using the generate_image tool? No, that's heavy.
+// I'll skip icon creation or create empty files. Chrome warns but loads.
+// Actually, I can use a default pixel or just not worry.
+// Wait, manifest requires them? No, it's optional but good practice.
+// I will remove icons from manifest to avoid errors if I don't create them.

@@ -1,0 +1,124 @@
+/* CSS Mới cho giao diện Mini Bar */
+
+/* Main Container - Luôn hiển thị ở dưới cùng */
+#vps-helper-container {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    /* Background tối mờ, kính (glassmorphism) */
+    background: rgba(30, 30, 30, 0.95);
+    /* Đậm hơn chút cho rõ */
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 2147483647;
+    /* Max Z-index */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+}
+
+/* Luôn hiện rõ, không mờ */
+#vps-helper-container:hover {
+    border-color: #FF5722;
+}
+
+/* Ô nhập liệu CHÍNH */
+#quick-price-input {
+    width: 100px;
+    background: #000;
+    color: #4CAF50;
+    /* Màu xanh lá nổi bật */
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+/* Xóa mũi tên tăng giảm (Spin buttons) */
+#quick-price-input::-webkit-outer-spin-button,
+#quick-price-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#quick-price-input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Nút Cài đặt (Bánh răng nhỏ) */
+#btn-start-setup {
+    background: transparent;
+    color: #888;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+}
+
+#btn-start-setup:hover {
+    color: #fff;
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+
+/* Trạng thái (Ẩn/Hiện text status nhỏ) */
+#setup-status {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    font-size: 12px;
+    background: #333;
+    padding: 5px;
+    border-radius: 4px;
+    color: #fff;
+    pointer-events: none;
+}
+
+/* --- OVERLAY SETUP MODE --- */
+#vps-overlay-msg {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #FF5722;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 2147483647;
+    pointer-events: none;
+}
+
+.vps-selector-hover {
+    outline: 2px solid #FF5722 !important;
+    background: rgba(255, 87, 34, 0.2) !important;
+    cursor: crosshair !important;
+}
+
+.flash-success {
+    animation: flashInfo 0.5s;
+}
+
+@keyframes flashInfo {
+    0% {
+        outline: 4px solid #4CAF50;
+        background: rgba(76, 175, 80, 0.3);
+    }
+
+    100% {
+        outline: none;
+        background: transparent;
+    }
+}

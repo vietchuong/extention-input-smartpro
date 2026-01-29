@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "VPS Pro Trading Assistant",
+    "version": "2.0",
+    "description": "Auto Stop Order + Custom TradingView Overlay for VPS SmartPro",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "*://smartpro.vps.com.vn/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://smartpro.vps.com.vn/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
